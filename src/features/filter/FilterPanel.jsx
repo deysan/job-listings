@@ -15,7 +15,7 @@ const FilterPanel = () => {
   };
 
   const handleClearFilters = () => {
-    dispatch(clearFilter);
+    dispatch(clearFilter());
   };
 
   if (currentFilters.length === 0) return null;

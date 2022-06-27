@@ -4,8 +4,7 @@ import { Badge } from 'UI/Badge';
 import { Card } from 'UI/Card';
 import { Stack } from 'UI/Stack';
 
-import { selectFilters } from 'store/filters/filter-selector';
-import { clearFilter, removeFilter } from 'store/filters/filter-actions';
+import { clearFilter, removeFilter, selectFilters } from './filter-slice';
 
 const FilterPanel = () => {
   const dispatch = useDispatch();
@@ -16,7 +15,7 @@ const FilterPanel = () => {
   };
 
   const handleClearFilters = () => {
-    dispatch(clearFilter);
+    dispatch(clearFilter());
   };
 
   if (currentFilters.length === 0) return null;
